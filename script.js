@@ -7,10 +7,8 @@ const googleDatabase = [
   "favoritecats.com",
 ];
 
-const googleSearch = (searchInput) => {
-  const matches = googleDatabase.filter((website) =>
-    website.includes(searchInput)
-  );
+const googleSearch = (searchInput, database) => {
+  const matches = database.filter((website) => website.includes(searchInput));
 
   return matches.length > 3 ? matches.slice(0, 3) : matches;
 };
